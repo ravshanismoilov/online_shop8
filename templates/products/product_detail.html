@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProductDetail</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+
+  {% block content %}
+        <img src="{{ product.image.url }}" height="200px"><br>
+        Model: {{ product.name }}<br>
+        Make Date: {{ product.year }}<br>
+        Price: {{ product.price }}$<br>
+        Description: {{ product.description }}<hr>
+        <button><a href="{% url 'homepage' %}"> home </a></button>
+  {% endblock content %}
+</body>
+</html>

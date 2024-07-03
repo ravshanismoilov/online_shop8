@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>products</title>
+</head>
+<body>
+
+
+
+
+      {% for product in products %}
+          {% if product.image %}
+              <img src="{{ product.image.url }}" height="200px"><br>
+              Model: {{ product.name }}<br>
+              <a href="{% url 'product-detail' product.pk %}"> for more </a><hr>
+          {% else %}
+                Model: {{ product.name }}<br>
+              <a href="{% url 'product-detail' product.pk %}"> for more </a><hr>
+          {% endif %}
+      {% endfor %}
+
+
+</body>
+
+
+{% endblock content %}

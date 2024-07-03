@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+
+  {% block content %}
+    <h1> Home Page </h1>
+    <h3><button><a href="{% url 'create-product'%}"> Add </a></button></h3>
+  {% endblock content %}
+</body>
+</html>
